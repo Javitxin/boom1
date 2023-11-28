@@ -1,17 +1,105 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-  color: #333;
+    color: #333;
 }
+
 #result .green {
-  color: #2ecc71;
+    color: #2ecc71;
 }
 
 #result .red {
-  color: #e74c3c;
+    color: #e74c3c;
+}
+
+h1,
+p {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#userInput {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-left: 50%;
+    border-radius: 30%;
+    background-color: aqua;
+}
+
+#countdown {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 5%;
+    color: red;
+}
+
+#result,
+#numeros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 5%;
+}
+
+#resultGanador {
+    font-size: 100px;
+}
+
+#numeros {
+    color: palevioletred;
+}
+
+button {
+    margin-top: 5%;
+    margin-left: 40%;
+    background: #1AAB8A;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 60px;
+    font-size: 1.6em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+button:hover {
+    background: #fff;
+    color: #333;
+}
+
+button:before,
+button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #1aab8911;
+    transition: 400ms ease all;
+}
+
+button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+button:hover:before,
+button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
 }
